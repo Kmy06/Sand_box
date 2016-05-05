@@ -1,0 +1,12 @@
+<h1>Books#index</h1>
+<p>Find me in app/views/books/index.html.erb</p>
+<% @books.each do |book|%>
+<p><%= book.title %></p>
+<% end %>
+
+<%= form_tag(method: "get") do%>
+<div class="form-group">
+	<input type="text" name="title" class="form-control">
+</div>
+	<input type="submit" value="envoyer" class="btn btn-info">
+<% end %>
