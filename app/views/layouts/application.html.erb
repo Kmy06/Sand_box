@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Sand_box</title>
+  <title><%= yield(:page_title).empty? ? "Sand_box" : yield(:page_title) %></title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
@@ -10,6 +10,9 @@
 </head>
 <body>
 <style type="text/css">
+  body{
+    margin-top: 70px;
+  }
 	.container{
 		width: 30%;
 	}

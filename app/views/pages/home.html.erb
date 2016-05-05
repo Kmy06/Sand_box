@@ -1,12 +1,6 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<h2>Hello World</h2>
-<p><%= @variable %></p>
-	<% if @variable == 6%>
-		<p>c'est bon</p>
-	<%else%>
-		<p>c'est dommage</p>	
-	<%end%>
-<% @variable.times do |i| %>
-	<p>Hello world <%= i %></p>
-<%end%>
+<% provide(:page_title, "Home") %>
+<%= for book in @books do %>
+<ul>
+	<li><%= book.title %></li>
+</ul>
+<% end %>
