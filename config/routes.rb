@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   
   #get 'books/index'
 
-
+get 'pages' => 'pages#home'
   get 'books' => 'books#index'
   post 'books' => 'books#create'
 
