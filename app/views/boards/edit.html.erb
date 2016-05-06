@@ -1,0 +1,7 @@
+<% provide(:page_title, "Edit - #{@board.title}") %>
+
+<%= form_for @board do |f| %>
+	<%= f.text_field "title", class: "form_control", placeholder: "#{@board.title}" %>
+	<%= f.submit "Modify", class: "btn btn-info" %>
+<% end %>
+<%= link_to "Cancel", root_path %>

@@ -1,5 +1,5 @@
 <% provide(:page_title, "Show") %>
 
 <%= @board.title %>
-
+<%= link_to "Modify", "#{@board.id}/edit" %>
 <%= link_to "Back", ".." %>

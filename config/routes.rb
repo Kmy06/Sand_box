@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get 'boards/:id' => 'boards#show'
   get 'new' => 'boards#new'
   post 'boards' => 'boards#create'
+  get 'boards/:id/edit' => 'boards#edit'
+  patch 'boards/:id' => 'boards#update'
 
   get 'pages' => 'pages#home'
   get 'books' => 'books#index'
