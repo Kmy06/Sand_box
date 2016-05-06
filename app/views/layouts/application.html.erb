@@ -14,13 +14,14 @@
     margin-top: 70px;
   }
 	.container{
-		width: 30%;
+		width: 70%;
 	}
 </style>
 <div class="container">
 <% flash.each do |message_type, message| %>
       <div class="alert alert-<%= message_type %>"><%= message %></div>
   <% end %>
+  <%= render 'layouts/menu' %>
 	<%= yield %>
 </div>
 </body>
