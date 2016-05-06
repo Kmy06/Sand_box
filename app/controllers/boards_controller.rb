@@ -14,7 +14,7 @@ class BoardsController < ApplicationController
   def create
     @board = Board.new(board_params)
     if @board.save
-      flash[:success] = "Success !!!"
+      flash[:success] = "Success !!!" # flash = {:key => "success", :value => "Success !!!"}
       redirect_to @board
     else
       render 'new'
