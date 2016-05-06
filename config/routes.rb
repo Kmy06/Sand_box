@@ -2,15 +2,15 @@ Rails.application.routes.draw do
   
   get 'boards' => 'boards#index'
   get 'boards/:id' => 'boards#show'
-  
-  #get 'books/index'
+  get 'new' => 'boards#new'
+  post 'boards' => 'boards#create'
 
-get 'pages' => 'pages#home'
+  get 'pages' => 'pages#home'
   get 'books' => 'books#index'
   post 'books' => 'books#create'
 
   root 'boards#index'
-
+  resources :boards # fourni toutes les routes de boards
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
