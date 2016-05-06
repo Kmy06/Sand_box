@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   post 'boards' => 'boards#create'
   get 'boards/:id/edit' => 'boards#edit'
   patch 'boards/:id' => 'boards#update'
+  delete 'boards/:id' => 'boards#delete'
+
 
   get 'pages' => 'pages#home'
   get 'books' => 'books#index'

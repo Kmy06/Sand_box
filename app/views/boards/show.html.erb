@@ -2,4 +2,5 @@
 
 <%= @board.title %>
 <%= link_to "Modify", "#{@board.id}/edit" %>
+<%= link_to "Delete", @board, method: "delete" %>
 <%= link_to "Back", ".." %>

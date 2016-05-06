@@ -35,6 +35,12 @@ class BoardsController < ApplicationController
     end
   end
   
+  def delete
+    @board = Board.find(params[:id]).destroy
+    flash[:warning] = "#{@board.title} has been Deleted"
+    redirect_to boards_path
+  end
+
   private
 
     def board_params
