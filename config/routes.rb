@@ -1,20 +1,25 @@
 Rails.application.routes.draw do
-  
+
+  get 'pages' => 'pages#index'
+  get 'pages/:id' => 'pages#show'
+  get 'pages_new' => 'pages#new'
+  post 'categories' => 'pages#create'
+  get 'pages/:id/edit' => 'pages#edit'
+  patch 'pages/:id' => 'pages#update'
+  delete 'pages/:id' => 'pages#delete'
+
   get 'boards' => 'boards#index'
-  get 'boards/:id' => 'boards#show'
+  get 'boards/:id' => 'boards#index'
   get 'new' => 'boards#new'
   post 'boards' => 'boards#create'
   get 'boards/:id/edit' => 'boards#edit'
   patch 'boards/:id' => 'boards#update'
   delete 'boards/:id' => 'boards#delete'
-
-
-  get 'pages' => 'pages#home'
-  get 'books' => 'books#index'
-  post 'books' => 'books#create'
-
-  root 'boards#index'
+  
+  root 'pages#index'
+  resources :categories
   resources :boards # fourni toutes les routes de boards
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

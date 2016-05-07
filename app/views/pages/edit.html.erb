@@ -1,0 +1,9 @@
+<% provide(:page_title, "Edit - #{@board.title}") %>
+<div class="form-group">
+	<%= form_for @board do |f| %>
+		<div class="form-group"><%= f.text_field "title", class: "form_control", placeholder: "#{@board.title}" %></div>
+		<%= f.submit "Modify", class: "btn btn-info" %>
+	<% end %>
+</div>
+<%= link_to "Cancel", root_path %>
+<%= render 'shared/error_messages' %>

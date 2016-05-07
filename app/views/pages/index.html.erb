@@ -1,0 +1,12 @@
+<% provide(:page_title, "category") %>
+<%= link_to "New category", "pages_new", class: "btn btn-info" %>
+<% for category in @categories %>
+	<table class="table table-hover">
+		<thead>
+			<th>Title</th>
+		</thead>
+		<tr>
+			<td><%= link_to  "#{category.title}", "../boards/#{category.id}" %></td>
+		</tr>
+	</table>
+<% end %>

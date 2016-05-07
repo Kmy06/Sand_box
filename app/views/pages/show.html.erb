@@ -1,0 +1,13 @@
+<% provide(:page_title, "Show") %>
+<table class="table">
+	<thead class="thead-inverse">
+		<tr>
+			<th><%= @board.title %> / <%= link_to "Modify", "#{@board.id}/edit" %> / <%= link_to "Delete", @board, method: "delete" %></th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td></td>
+		</tr>
+	</tbody>
+</table>

@@ -1,16 +1,20 @@
-<% provide(:page_title, "Board") %>
-<%= link_to "New Board", "new", class: "btn btn-info" %>
-<% for board in @boards %>
+<% provide(:page_title, "categories") %>
+<%= link_to "New categories", "new", class: "btn btn-info" %>
+
 	<table class="table table-hover">
+		<thead>
+			<th><%= @category.title %></th>
+		</thead>
 		<thead>
 			<th>Title</th>
 			<th>Created</th>
 			<th>Updated</th>
 		</thead>
 		<tr>
-			<td><%= link_to  "#{board.title}", "boards/#{board.id}" %></td>
-			<td><%= board.created_at %></td>
-			<td><%= board.updated_at %></td>
+			<%= for board in @boards do %>
+				<td><%= link_to  "#{board.title}", "#" %></td>
+				<td><%= board.created_at %></td>
+				<td><%= board.updated_at %></td>
+			<% end %>
 		</tr>
 	</table>
-<% end %>

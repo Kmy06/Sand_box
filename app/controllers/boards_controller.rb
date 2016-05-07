@@ -1,10 +1,13 @@
 class BoardsController < ApplicationController
   def index
-  	@boards = Board.all
+    @category = Category.find(params[:id])
+    @boards = @category.boards
+  	# @boards = Board.find(category_id: params[:id])
   end
 
   def show
-  	@board = Board.find(params[:id])
+    @categories = Category.find(params[:id])
+  	@categories = Category.boards
   end
 
   def new

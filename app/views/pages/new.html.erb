@@ -1,0 +1,7 @@
+<% provide(:page_title, "New") %>
+<div class="form-group">
+	<%= form_for @category do |f| %>
+		<div class="form-group"><%= f.text_field :title, class: "form-control", placeholder: "Tilte" %></div>
+		<%= f.submit "Create", class: "btn btn-primary" %>
+	<% end %>
+</div>
